@@ -1,6 +1,6 @@
 .DS_Store
-blog/db.json
+db.json
 *.log
-blog/node_modules/*
-blog/public/*
-.deploy*/*
+node_modules/
+public/
+.deploy*/
