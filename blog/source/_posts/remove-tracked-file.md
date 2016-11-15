@@ -19,7 +19,7 @@ fatal: not removing 'public/' recursively without -r
 ```
 需要使用参数`-r` 来递归删除目录，否则只能删除文件，所以取消git版本的命令应该是这样:
 ```git
-git rm -r --cached public/
+git rm -r --cached public
 ```
 然后就可以看到很多文件从版本中删除了。 
 
