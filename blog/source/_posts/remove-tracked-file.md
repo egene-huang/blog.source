@@ -27,3 +27,7 @@ git rm -r --cached public/
 
 慢慢折腾，加油！！！！
 
+
+参考链接:
+[segmentfault#n͛i͛g͛h͛t͛i͛r͛e͛](https://segmentfault.com/q/1010000000430426)
+
