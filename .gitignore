@@ -1,7 +1,7 @@
 .DS_Store
-db.json
+## db.json
 *.log
 node_modules/
 public/
-themes/
+## themes/
 .deploy*/
