@@ -75,4 +75,6 @@ archive_generator:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/egene-huang/egene-huang.github.io.git
+  branch: master
