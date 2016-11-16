@@ -1,8 +1,8 @@
 .DS_Store
 ## db.json
 *.log
-node_modules/
-public/
-themes/apollo/
-themes/landscape/
+blog/node_modules/
+blog/public/
+blog/themes/apollo
+blog/themes/landscape/
 .deploy*/
