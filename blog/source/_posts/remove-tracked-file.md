@@ -1,5 +1,5 @@
 ---
-title: 使用.gitignore文件，取消某些文件版本控制
+title: 使用.gitignore文件取消某些文件版本控制
 date: 2016-11-15 22:25:29
 tags: git, github
 ---
