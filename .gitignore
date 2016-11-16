@@ -3,6 +3,5 @@
 *.log
 blog/node_modules/
 blog/public/
-blog/themes/apollo
-blog/themes/landscape/
+blog/themes/
 .deploy*/
