@@ -9,8 +9,12 @@ description: a boy
 author: egene-huang
 language: en
 timezone:
+
+### nexT theme
 avatar: /images/Monkey-D-Luffy.jpg
 duoshuo_shortname: egene-huang
+# JiaThis 分享服务
+# jiathis: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
