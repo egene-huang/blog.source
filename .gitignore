@@ -1,5 +1,5 @@
 .DS_Store
-## db.json
+db.json
 *.log
 blog/node_modules/
 blog/public/
