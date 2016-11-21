@@ -11,7 +11,7 @@ tags:
 
 ## MongoDB安装
 
-学习node块结束了, 想使用express+ejs+mongoDB 完成一个小栗子, 算是我学习node的一个结业考试.  不过,之前从来没有接触过mongodb,对我这小小白来说, 安装-启动mongodb都异常的艰难,  想想真是 ...  铁窗呀 ~~  铁门 ~  铁锁链 ~~~  路过的你们请尽情嘲笑吧 ,  我不怕!!!!
+学习node快接近尾声了, 想使用express+ejs+mongoDB 完成一个小栗子, 算是我学习node的一个结业考试.  不过,之前从来没有接触过mongodb,对我这小小白来说, 安装-启动mongodb都异常的艰难,  想想真是 ...  铁窗呀 ~~  铁门 ~  铁锁链 ~~~  路过的你们请尽情嘲笑吧 ,  我不怕!!!!
 
 <!-- more -->
 
@@ -192,7 +192,7 @@ systemctl start mongodb.service
 ```
 
 
-下面也有一些常用问题解决方案,例如mongodb服务异常关闭导致被锁,和mongodb使用指南, 很方便,  之前老听人说`Archlinux Wiki` 是Linux发行版最完整最详细的Wiki,  现在看来,确是如此, 平时archlinx 闹脾气也都是翻阅Wiki解决的. 
+下面也有一些常用问题解决方案,例如mongodb服务异常关闭导致被锁,和mongodb使用指南, 很方便,  之前老听人说`Archlinux Wiki` 是Linux发行版最完整最详细的Wiki,  现在看来,越来越觉得确是如此, 平时archlinx 闹脾气也都是翻阅Wiki解决的. 
 
 这一通折腾之后, 使用`--repair`修复之前的`database` 设置, 如:
 
@@ -224,7 +224,7 @@ Server has startup warnings:
 
 
 
-这代表mongodb服务已经成功启动了, 可以使用了, 到这里,我总算是半只脚迈进了mongodb的大门, 接下来可以在项目实践中一边学些一边使用mongodb了.
+这代表mongodb服务已经成功启动了, 可以使用了, 到这里,我总算是半只脚迈进了mongodb的大门, 接下来可以在项目实践中一边学习一边使用mongodb了.
 
 
 
@@ -234,7 +234,7 @@ Server has startup warnings:
 > 默认为`/data/db`
 
 
-这个目录最开始是不存在的,而且也启动服务也不会帮我们新建. 所以需要提前将这个目录新建完成. 当然,这个目录是可以修改的, 使用`--dbpath` 自定义mongodb数据存储目录.  使用`--port arg` 可以自定义服务端口, 还有主机地址 host , 更多参数帮助可以使用:
+这个目录最开始是不存在的,而且运行参数设定命令也不会自动帮我们新建. 所以需要提前将这个目录新建完成. 当然,这个目录是可以修改的, 使用`--dbpath` 自定义mongodb数据存储目录.  使用`--port arg` 可以自定义服务端口, 还有主机地址 host , 更多参数帮助可以使用:
 
 
 ```bash
