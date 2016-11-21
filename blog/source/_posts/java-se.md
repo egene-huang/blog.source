@@ -18,10 +18,10 @@ tags:
 
 <!-- more -->
 
-## java 基础笔记
+## java基础笔记 ##
 
 
-###  java 关键字(也称为保留字)
+###  java关键字(也称为保留字) ###
 > `notice`> 这里只是罗列出我们工作可能用到的.
 
 | public | class | new | import | package | static | final |
@@ -34,22 +34,22 @@ tags:
 |catch|void| const|throw|  -  | -  |-| 
 
 
-### java 的CLASSPATH
+### java 的CLASSPATH ###
 　　java 的classpath 用来设置JVM加载类(class) 的路径,一般设置值为`.` 表示从当前路径开始加载。JVM默认为从当前路径开始加载.但是我们依然需要设置这个值，因为，如果此路径被指定为其他路径则当前路径下class 就不会被加载了。 比如我们设置`CLASSPATH='/home/test/javatest/'`, 则我们将javatest下生成的class文件移动到`home`目录下，执行`java` 命令会提示找不到`xxx class` 。
 
-### java 的path
+### java 的path ###
 　　`path`在系统里用来帮助系统找到应用程序可执行文件.这里我们是为了方便找到`javac` 和`java`命令.  _包含jdk/bin/和jre/bin/ 目录下的命令。
 　　
-### 关于类文件名和public 修饰的类名一致#
+### 关于类文件名和public修饰的类名一致 ###
 　　我们要求类文件名要和`public`修饰的类名一致，这是为什么呢？
 　　我们可以尝试将文件名和`public`修饰的类名不一致，编译后我们观察`class`文件．我们会发现`class`文件名称是我们`public`修饰的名子，不会编译成为这个类所在的文件的名．所以会有找不到编写类的可能． 同时也是为了方便找到对应文件所在的类。
 
-### 标识符
+### 标识符 ###
 　　标识符是我们平常编写代码经常使用到的．我们给类、变量等去名子的时候需要遵守java标识符规范。
 **标识符规范我们：只能用数字、字母、下划线(_) 、$组成，且不能以数字开头或使用java关键字.**
 
 
-### 数据类型
+### 数据类型 ###
 java 数据类型大致分为以下两大类型:
 1. 基本数据类型:
 	1. 整型数据类型：byte、int、short、long　　　　-> 默认值 : 0
@@ -81,14 +81,10 @@ Integer i3 = 129;
 Integer i4 = 129;//new Integer(129);
 System.out.println("i3== i4 "+ (i3 == i4));// false
 	
-```    
-{% blockquote %}
- 但是有一个特性，普通操作符不使用于包装类，所以包装类做普通运算的时候会自动拆箱进行运算。例如 Integer 和int 比较  或者Integer 和int  做 + - * /运算都会自动拆箱后运算。所以结果会跟我想的不一样，我们需要注意.
- {% endblockquote %}         
+```
 
-### 运算符
-#### 逻辑运算符
-
+> 但是有一个特性，普通操作符不使用于包装类，所以包装类做普通运算的时候会自动拆箱进行运算。
+例如 Integer 和int 比较  或者Integer 和int  做 + - * /运算都会自动拆箱后运算。所以结果会跟我想的不一样，我们需要注意.
 
 
 
