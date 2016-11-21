@@ -1,5 +1,5 @@
 ---
-title: mongodb 安装
+title: 初次学习mongodb
 date: 2016-11-21 14:22:04
 updated:
 categories: db
