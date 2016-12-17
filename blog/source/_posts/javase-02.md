@@ -9,7 +9,8 @@ tags:
 - javase
 ---
 
-继续[java基础](https://egene-huang.github.io/2016/11/17/java-se/),　目前因为在`Hexo`上使用`Markdown`书写格式上还有些问题，所以暂时将`java 基础分为多个部分`
+继续[java基础](https://egene-huang.github.io/2016/11/17/java-se/),　
+在`Hexo`上使用`Markdown`书写格式上好像还有些问题，只好将`java 基础分为多个部分`, 希望以后能找到解决的办法.
 
 <!-- more -->
 ### 运算符 ###
