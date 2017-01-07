@@ -24,147 +24,42 @@ soccer/
 ├── soccer-bat
 │   ├── pom.xml
 │   ├── soccer-bat.iml
-│   ├── src
-│   │   ├── main
-│   │   │   ├── java
-│   │   │   │   └── com
-│   │   │   │       └── soccer
-│   │   │   │           └── bat
-│   │   │   │               ├── controller
-│   │   │   │               │   └── TestController.java
-│   │   │   │               ├── domain
-│   │   │   │               │   └── UserService.java
-│   │   │   │               ├── model
-│   │   │   │               │   └── User.java
-│   │   │   │               └── repository
-│   │   │   │                   └── UserRepository.java
-│   │   │   ├── resources
-│   │   │   │   ├── application.properties
-│   │   │   │   ├── css
-│   │   │   │   ├── images
-│   │   │   │   ├── js
-│   │   │   │   ├── logback.xml
-│   │   │   │   └── spring
-│   │   │   │       ├── applicationContext.xml
-│   │   │   │       └── spring-mvc.xml
-│   │   │   └── webapp
-│   │   │       ├── index.jsp
-│   │   │       ├── META-INF
-│   │   │       │   └── jpa-named-queries.properties
-│   │   │       └── WEB-INF
-│   │   │           ├── classes
-│   │   │           │   ├── application.properties
-│   │   │           │   ├── com
-│   │   │           │   │   └── soccer
-│   │   │           │   │       └── bat
-│   │   │           │   │           ├── controller
-│   │   │           │   │           │   └── TestController.class
-│   │   │           │   │           ├── domain
-│   │   │           │   │           │   └── UserService.class
-│   │   │           │   │           ├── model
-│   │   │           │   │           │   └── User.class
-│   │   │           │   │           └── repository
-│   │   │           │   │               └── UserRepository.class
-│   │   │           │   ├── logback.xml
-│   │   │           │   └── spring
-│   │   │           │       ├── applicationContext.xml
-│   │   │           │       └── spring-mvc.xml
-│   │   │           ├── lib
-│   │   │           │   ├── antlr-2.7.7.jar
-│   │   │           │   ├── aopalliance-1.0.jar
-│   │   │           │   ├── asm-4.0.jar
-│   │   │           │   ├── aspectjrt-1.7.0.jar
-│   │   │           │   ├── aspectjweaver-1.7.0.jar
-│   │   │           │   ├── cglib-3.0.jar
-│   │   │           │   ├── commons-collections-3.2.jar
-│   │   │           │   ├── commons-dbcp-20030825.184428.jar
-│   │   │           │   ├── commons-fileupload-1.3.1.jar
-│   │   │           │   ├── commons-io-2.2.jar
-│   │   │           │   ├── commons-lang3-3.3.2.jar
-│   │   │           │   ├── commons-logging-1.1.3.jar
-│   │   │           │   ├── commons-pool-20030825.183949.jar
-│   │   │           │   ├── dom4j-1.6.1.jar
-│   │   │           │   ├── druid-1.0.9.jar
-│   │   │           │   ├── ehcache-core-2.4.3.jar
-│   │   │           │   ├── fastjson-1.1.41.jar
-│   │   │           │   ├── hibernate-commons-annotations-4.0.5.Final.jar
-│   │   │           │   ├── hibernate-core-4.3.6.Final.jar
-│   │   │           │   ├── hibernate-ehcache-4.3.10.Final.jar
-│   │   │           │   ├── hibernate-entitymanager-4.3.6.Final.jar
-│   │   │           │   ├── hibernate-jpa-2.1-api-1.0.0.Draft-16.jar
-│   │   │           │   ├── jandex-1.1.0.Final.jar
-│   │   │           │   ├── javassist-3.18.1-GA.jar
-│   │   │           │   ├── javax.servlet.jsp.jstl-api-1.2.1.jar
-│   │   │           │   ├── jboss-logging-3.1.3.GA.jar
-│   │   │           │   ├── jboss-logging-annotations-1.2.0.Beta1.jar
-│   │   │           │   ├── jboss-transaction-api_1.2_spec-1.0.0.Final.jar
-│   │   │           │   ├── jcl-over-slf4j-1.7.7.jar
-│   │   │           │   ├── jsp-api-2.1.jar
-│   │   │           │   ├── jstl-api-1.2.jar
-│   │   │           │   ├── jstl-impl-1.2.jar
-│   │   │           │   ├── log4j-1.2.17.jar
-│   │   │           │   ├── logback-access-1.1.8.jar
-│   │   │           │   ├── logback-classic-1.1.8.jar
-│   │   │           │   ├── logback-core-1.1.8.jar
-│   │   │           │   ├── logback-ext-spring-0.1.4.jar
-│   │   │           │   ├── mysql-connector-java-5.1.32.jar
-│   │   │           │   ├── servlet-api-3.0-alpha-1.jar
-│   │   │           │   ├── slf4j-api-1.7.22.jar
-│   │   │           │   ├── slf4j-log4j12-1.7.22.jar
-│   │   │           │   ├── spring-aop-4.1.2.Release.jar
-│   │   │           │   ├── spring-aspects-4.1.0.RELEASE.jar
-│   │   │           │   ├── spring-beans-4.1.2.release.jar
-│   │   │           │   ├── spring-context-4.1.0.RELEASE.jar
-│   │   │           │   ├── spring-context-support-4.1.6.RELEASE.jar
-│   │   │           │   ├── spring-core-4.1.2.RELEASE.jar
-│   │   │           │   ├── spring-data-commons-1.9.0.RELEASE.jar
-│   │   │           │   ├── spring-data-jpa-1.7.0.RELEASE.jar
-│   │   │           │   ├── spring-expression-4.1.0.RELEASE.jar
-│   │   │           │   ├── spring-jdbc-4.1.3.Release.jar
-│   │   │           │   ├── spring-orm-4.1.0.RELEASE.jar
-│   │   │           │   ├── spring-test-4.1.2.Release.jar
-│   │   │           │   ├── spring-tx-4.1.2.Release.jar
-│   │   │           │   ├── spring-web-4.1.0.RELEASE.jar
-│   │   │           │   ├── spring-webmvc-4.1.0.RELEASE.jar
-│   │   │           │   └── xml-apis-1.0.b2.jar
-│   │   │           ├── views
-│   │   │           │   └── hello.jsp
-│   │   │           └── web.xml
-│   │   └── test
-│   │       ├── java
-│   │       └── resources
-│   └── target
-│       ├── classes
-│       │   ├── application.properties
-│       │   ├── com
-│       │   │   └── soccer
-│       │   │       └── bat
-│       │   │           ├── controller
-│       │   │           │   └── TestController.class
-│       │   │           ├── domain
-│       │   │           │   └── UserService.class
-│       │   │           ├── model
-│       │   │           │   └── User.class
-│       │   │           └── repository
-│       │   │               └── UserRepository.class
-│       │   ├── logback.xml
-│       │   └── spring
-│       │       ├── applicationContext.xml
-│       │       └── spring-mvc.xml
-│       ├── maven-archiver
-│       │   └── pom.properties
-│       ├── maven-status
-│       │   └── maven-compiler-plugin
-│       │       ├── compile
-│       │       │   └── default-compile
-│       │       │       ├── createdFiles.lst
-│       │       │       └── inputFiles.lst
-│       │       └── testCompile
-│       │           └── default-testCompile
-│       │               └── inputFiles.lst
-│       ├── soccer-bat.war
-│       └── test-classes
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── soccer
+│       │   │           └── bat
+│       │   │               ├── controller
+│       │   │               │   └── TestController.java
+│       │   │               ├── domain
+│       │   │               │   └── UserService.java
+│       │   │               ├── model
+│       │   │               │   └── User.java
+│       │   │               └── repository
+│       │   │                   └── UserRepository.java
+│       │   ├── resources
+│       │   │   ├── application.properties
+│       │   │   ├── css
+│       │   │   ├── images
+│       │   │   ├── js
+│       │   │   ├── logback.xml
+│       │   │   └── spring
+│       │   │       ├── applicationContext.xml
+│       │   │       └── spring-mvc.xml
+│       │   └── webapp
+│       │       ├── index.jsp
+│       │       ├── META-INF
+│       │       │   └── jpa-named-queries.properties
+│       │       └── WEB-INF
+│       │           ├── views
+│       │           │   └── hello.jsp
+│       │           └── web.xml
+│       └── test
+│           ├── java
+│           └── resources
 └── soccer.iml
+
 
 ```
 
