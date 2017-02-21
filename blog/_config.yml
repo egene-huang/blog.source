@@ -66,13 +66,6 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
-markdown:
-  render:
-    html: true # Doesn't escape HTML content
-    linkify: true # Returns text links as proper links inlined with the paragraph.
-    typographer: true # Substitution of common typographical elements will take place.
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -93,3 +86,12 @@ deploy:
   type: git
   repo: https://github.com/egene-huang/egene-huang.github.io.git
   branch: master
+
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
+markdown:
+  render:
+    html: true # Doesn't escape HTML content
+    linkify: true # Returns text links as proper links inlined with the paragraph.
+    typographer: true # Substitution of common typographical elements will take place.
