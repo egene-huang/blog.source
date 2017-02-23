@@ -17,8 +17,8 @@ tags:
 #### 安装驱动xf86-input-evdev
 
 首先，安装`xf86-input-evdev`驱动后，默认在`/usr/share/X11/xorg.conf.d`下有一个配置文件 - `10-evdev.conf`,大概内容如下:
-  ```conf
-  #
+<pre>
+#
 # Catch-all evdev loader for udev-based systems
 # We don't simply match on any device since that also adds accelerometers
 # and other devices that we don't really want to use. The list below
@@ -58,39 +58,42 @@ Section "InputClass"
         MatchDevicePath "/dev/input/event*"
         Driver "evdev"
 EndSection
+</pre>        
 
-  ```
-将这个文件copy到`/etc/X11/xorg.conf.d/`下，然后结合[synaptics](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)驱动一起控制触摸板[TouchPad]
+
+将这个文件copy到`/etc/X11/xorg.conf.d/`下，然后结合[synaptics](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)驱动一起控制触摸板[TouchPad]            
+
+
 #### 安装驱动xf86-input-synaptics
+
 同样，安装xf86-input-synaptics后其默认配置文件(`70-synaptics.conf`)在｀/usr/share/X11/xorg.conf.d/｀下, 我们需要将这个配置文件移动到`/etc/X11/xorg.conf.d/`目录下，然后才可以生效,内容类似这样:
 `/etc/X11/xorg.conf.d/70-synaptics.conf`
-```conf
-Section "InputClass"
-    Identifier "touchpad"
-    Driver "synaptics"
-    MatchIsTouchpad "on"
-        Option "TapButton1" "1"
-        Option "TapButton2" "3"
-        Option "TapButton3" "2"
-        Option "VertEdgeScroll" "on"
-        Option "VertTwoFingerScroll" "on"
-        Option "HorizEdgeScroll" "on"
-        Option "HorizTwoFingerScroll" "on"
-        Option "CircularScrolling" "on"
-        Option "CircScrollTrigger" "2"
-        Option "EmulateTwoFingerMinZ" "40"
-        Option "EmulateTwoFingerMinW" "8"
-        Option "CoastingSpeed" "0"
-        Option "FingerLow" "30"
-        Option "FingerHigh" "50"
-        Option "MaxTapTime" "125"
-        ...
-EndSection
+
+```bash
+  Section "InputClass"
+      Identifier "touchpad"
+      Driver "synaptics"
+      MatchIsTouchpad "on"
+          Option "TapButton1" "1"
+          Option "TapButton2" "3"
+          Option "TapButton3" "2"
+          Option "VertEdgeScroll" "on"
+          Option "VertTwoFingerScroll" "on"
+          Option "HorizEdgeScroll" "on"
+          Option "HorizTwoFingerScroll" "on"
+          Option "CircularScrolling" "on"
+          Option "CircScrollTrigger" "2"
+          Option "EmulateTwoFingerMinZ" "40"
+          Option "EmulateTwoFingerMinW" "8"
+          Option "CoastingSpeed" "0"
+          Option "FingerLow" "30"
+          Option "FingerHigh" "50"
+          Option "MaxTapTime" "125"
+          ...
+  EndSection
 ```
-
-详细配置可以在[`ArchWiki#Touchpad_Synaptics`](https://wiki.archlinux.org/index.php/Touchpad_Synaptics#Configuration)查看.我的配置如下:
-`/etc/X11/xorg.conf.d/70-synaptics.conf`
-
+详细配置可以在[ArchWiki#Touchpad_Synaptics](https://wiki.archlinux.org/index.php/Touchpad_Synaptics#Configuration)查看.我的配置如下:
+``/etc/X11/xorg.conf.d/70-synaptics.conf``
 ```conf
 # Example xorg.conf.d snippet that assigns the touchpad driver
 # to all touchpads. See xorg.conf.d(5) for more information on
@@ -194,4 +197,3 @@ Virtual core keyboard                   	id=3	[master keyboard (2)]
 然后, 如果你使用gnome-shell则,可以安装gnome扩展 -TouchpadIndicator, 它可以通过GUI禁用触摸板．一般的，有了小红点触摸板基本就不用了.当然`Synaptics`提供了丰富的触摸板个性化配置，    
 例如，类似Mac触摸板(号称世界上比鼠标还好用的触摸板体验)自然滚动，画圆滚动，打字自动禁用触摸板等等．    
 随便你配置，但是，假设Mac触摸板的说法是事实(因为我没有体验过)，我想非Mac机器上配置触摸板应该达不到Mac那种效果，所以还是以实用为主.其实，在我的世界里，小红点才是世界上最优的鼠标替代者！尤其是对字符编辑者来说尤其是.想想你的双手可以不用键盘鼠标来回的移动.  
- 
