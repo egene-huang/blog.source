@@ -85,6 +85,14 @@ scp -P port localfile user@host:/targetpath/
 scp -P port -r localdir user@host:/targetpath/
 ```
 
+#### ln 为相同资源添加软链接
+```bash
+ln -s source target
+## 需要注意: 这里源资源和目标资源 都需要使用全路径, 
+## 例如 /data/myapp  ~/xxx/appln  否则链接失败无法使用
+## ref : http://www.cnblogs.com/peida/archive/2012/12/11/2812294.html
+```
 
 
 ---- END 以后用到了再补充
+
